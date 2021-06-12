@@ -1,10 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { async } from 'q';
-import { map } from 'async';
-import BaseComponent from 'bootstrap/js/dist/base-component';
-import { Component } from 'react';
+
 
 const App=()=> {
       const [data,setdata]=useState([]);
@@ -50,7 +47,7 @@ const App=()=> {
                       <th>{curE.state}</th>
                       <td>{curE.confirmed}</td>
                       <td>{curE.recovered}</td>
-                      <td>{curE.deaths>1000}</td>
+                      <td>{curE.deaths}</td>
                       <td>{curE.active}</td>
                       <td>{curE.lastupdatedtime}</td>
 
