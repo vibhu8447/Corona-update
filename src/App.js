@@ -26,7 +26,7 @@ const App=()=> {
   <div className='table-responsive' >
       <table className='center'>
         <thead className='table-dark'>
-        <tr>
+        <tr className ="Heading_design">
           <th>State</th>
           <td>Confirmed</td>
           <td>Recovered</td>
