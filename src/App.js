@@ -1,6 +1,30 @@
 
 import React, { useState, useEffect } from 'react';
 import './App.css';
+function getFaviconEl() {
+  return document.getElementById("favicon");
+}
+
+function Appp() {
+
+  const handleGoogle = () => {
+    const favicon = getFaviconEl(); // Accessing favicon element
+    favicon.href = "https://www.google.com/favicon.ico";
+  };
+
+  const handleYoutube = () => {
+    const favicon = getFaviconEl();
+    favicon.href = " https://s.ytimg.com/yts/img/favicon-vfl8qSV2F.ico";
+  };
+
+  return (
+    <div className="App">
+      <h1>Dynamically changing favicon</h1>
+      <button onClick={handleGoogle}>Google</button>
+      <button onClick={handleYoutube}>YouTube</button>
+    </div>
+  );
+}
 
 
 const App=()=> {
@@ -15,11 +39,17 @@ const App=()=> {
       }
       useEffect(()  =>
         {
+          const favicon = getFaviconEl(); // Accessing favicon element
+          favicon.href = "https://www.google.com/favicon.ico";
             getcoviddata();
+            
         },[]);
+
+        
 
   return(
   <>
+  {/* <Appp></Appp> */}
   <div className='heading'>
     <h1 className='title' ><span>INDIA</span> CORONA UPDATE </h1>
   </div>
